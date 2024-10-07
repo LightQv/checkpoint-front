@@ -4,16 +4,16 @@ import React from "react"
 interface Country {
   title: string
   emoji: string
-  link: number
+  code: string
 }
 
-export default function CountryCard({ title, emoji, link }: Country) {
+export default function CountryCard({ title, emoji, code }: Country) {
   return (
     <Link
-      href={`/${String(link)}`}
+      href={`/details/${code}`}
       className="border-slate-200 border-[1px] rounded-md flex flex-col justify-center items-center p-4 hover:bg-slate-200"
     >
-      <h3 className="line-clamp-1">{title}</h3>
+      <h2 className="line-clamp-1">{title}</h2>
       <p className="text-3xl">{emoji}</p>
     </Link>
   )
