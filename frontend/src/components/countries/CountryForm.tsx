@@ -1,6 +1,5 @@
 import React, { FormEvent, useState } from "react"
 import {
-  ObjectId,
   useAddCountryMutation,
   useGetAllContinentsQuery,
 } from "@/generated/graphql-types"
@@ -42,8 +41,6 @@ export default function CountryForm() {
         },
       },
       onError(error) {
-        console.log(error)
-
         setFormError(error.message)
       },
       onCompleted() {

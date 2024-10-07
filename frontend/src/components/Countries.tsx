@@ -24,7 +24,7 @@ export default function Countries() {
                   key={country.id}
                   title={country.name}
                   emoji={country.emoji}
-                  link={country.id}
+                  code={country.code}
                 />
               ))}
           </ul>
